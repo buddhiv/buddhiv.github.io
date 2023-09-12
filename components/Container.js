@@ -28,7 +28,7 @@ export default function Container(props) {
 
   const links = [
     {
-      name: "buddhiv.github.io",
+      name: "buddhiv.io",
       link: "/",
     },
     {
@@ -42,7 +42,7 @@ export default function Container(props) {
   ];
   const mobileLinks = [
     {
-      name: "buddhiv.github.io",
+      name: "buddhiv.io",
       link: "/",
     },
     {

@@ -19,64 +19,56 @@ export default function projects() {
           My creations from work and my own time.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <ProjectCard
             title="Banty.com"
             description="A HIPAA and Ontario Health compliant Telehealth solution that can easily add virtual visits to your family practice or specialty. I took care of the technical lead role while planning the technical roadmap, and designing solutions for problems."
-            slug="banty"
-            icon="moonbeam"
+            icon="🩺"
             colSpan={2}
             tags={["React", "MongoDB", "NodeJS", "REST", "AWS", "Jitsi", "WebRTC"]}
           />
           <ProjectCard
             title="Docswell.co"
             description="I contributed to Docswell as a technical lead which is a Telemedicine solution that streamlines healthcare operations with virtual visits, appointment scheduling, payment processing, digital forms, and secure messaging."
-            slug="test-two"
-            icon="aceternity"
+            icon="🩺"
             colSpan={2}
             tags={["NextJs", "NestJS", "MongoDB", "GraphQL", "REST", "AWS", "Jitsi", "WebRTC"]}
           />
           <ProjectCard
             title="Easly"
             description="Redefined customer support and supplier relationship management for all industries."
-            slug="test-three"
-            icon="algochurn"
+            icon="📑"
             tags={["Angular", "REST", "Bootstrap", "ChartJS"]}
           />
           <ProjectCard
             title="CyberHorizon"
             description="The answer to today’s shifting business dynamic of global offices and remote teams. Provides all the in-office connectivity."
-            slug="test-three"
-            icon="algochurn"
+            icon="📚"
             tags={["Angular", "REST", "Jitsi", "WebRTC"]}
           />
           <ProjectCard
             title="OrangeHRM Enterprise Mobile"
             description="A mobile application that presents all the HR management related features for a company of any scale. I worked as the Senior Mobile Application developer for this project which was downloaded across 10K+ users around the world."
-            slug="banty"
-            icon="moonbeam"
+            icon="📱"
             colSpan={2}
             tags={["React Native", "Android", "iOS", "REST", "Jest", "PHP", "Symfony", "MySQL"]}
           />
           <ProjectCard
             title="OrangeHRM Enterprise"
             description="Full-stack development experience by contributing to the world's most popular HRIS."
-            slug="test-three"
-            icon="algochurn"
+            icon="👩🏻‍💼"
             tags={["Angular", "PHP", "Symfony", "MySQL", "PHPUnit"]}
           />
           <ProjectCard
             title="Livepin"
             description="A way to interact for remote teams in their cooperate work."
-            slug="test-three"
-            icon="algochurn"
+            icon="🎮"
             tags={["React", "Agora", "AWS Lambda", "Serverless", "WebRTC"]}
           />
           <ProjectCard
             title="Manipulation Detection in Stock Trading"
             description="Final year research project. A machine learning-aided model to detect anomalies in stock trading data featuring graphical analysis."
-            slug="test-three"
-            icon="algochurn"
+            icon="📊"
             colSpan={2}
             tags={["Python", "Machine Learning", "Flask"]}
           />
