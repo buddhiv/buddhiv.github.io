@@ -125,9 +125,9 @@ const Header = () => {
 
         <a className="dark:border dark:border-zinc-700 text-gray-700 dark:text-gray-300 dark:bg-transparent rounded-full text-sm border border-gray-200 px-3 py-1 cursor-pointer">
           <div className="flex items-center">
-            <div className="text-xs">
-              📞{' '}
-            </div>
+            <svg viewBox="0 0 32 32" width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 6.444 13.857 C 9.004 18.889 13.12 23.004 18.16 25.564 L 22.071 21.644 C 22.56 21.156 23.263 21.013 23.876 21.209 C 25.867 21.867 28.009 22.223 30.223 22.223 C 31.209 22.223 32 23.013 32 24 L 32 30.223 C 32 31.209 31.209 32 30.223 32 C 13.529 32 0 18.471 0 1.777 C 0 0.791 0.8 0 1.777 0 L 8 0 C 8.987 0 9.777 0.791 9.777 1.777 C 9.777 3.991 10.133 6.133 10.791 8.124 C 10.987 8.737 10.844 9.44 10.356 9.929 L 6.444 13.857 Z" />
+            </svg>
 
             <span className="ml-2">
               +94 71 2489 789
