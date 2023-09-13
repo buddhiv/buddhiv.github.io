@@ -28,10 +28,6 @@ export default function Container(props) {
 
   const links = [
     {
-      name: "buddhiv.io",
-      link: "/",
-    },
-    {
       name: "Experience",
       link: "/experience",
     },
@@ -41,10 +37,6 @@ export default function Container(props) {
     },
   ];
   const mobileLinks = [
-    {
-      name: "buddhiv.io",
-      link: "/",
-    },
     {
       name: "Experience",
       link: "/experience",
@@ -116,7 +108,7 @@ export default function Container(props) {
             </svg>
           )}
         </button>
-        <div className="hidden sm:block rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10">
+        <div className="hidden sm:block rounded-full bg-white/90 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10 overflow-hidden">
           <Desktop
             links={links}
             hoveredIndex={hoveredIndex}
@@ -175,17 +167,28 @@ export const Mobile = ({ links }) => {
   return (
     <div className="w-full flex flex-row items-center space-x-2">
       <button
-        onClick={() => handleClick(links[0].link)}
+        onClick={() => handleClick('/')}
         className="relative rounded-lg px-1 py-1 sm:px-4 sm:py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
       >
-        {links[0]?.name}
+        <div className="flex">
+          <span
+            className={`relative z-10 text-md  ${router.asPath === '/'
+              ? "text-teal-600"
+              : "text-gray-600 dark:text-gray-50"
+              }`}
+          >
+            Buddhi
+          </span>
+          <span
+            className={`relative z-10 ${router.asPath === '/'
+              ? "text-slate-500"
+              : "text-gray-600 dark:text-gray-50"
+              }`}
+          >
+            .io
+          </span>
+        </div>
       </button>
-      {/* <button
-        onClick={() => handleClick(links[1].link)}
-        className="relative rounded-lg px-1 py-1 sm:px-4 sm:py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-      >
-        {links[1]?.name}
-      </button> */}
 
       <button
         onClick={() => setOpen(!open)}
@@ -219,7 +222,7 @@ export const Mobile = ({ links }) => {
             exit="exit"
             className="absolute inset-x-0 mx-auto top-20 flex flex-col w-[90%]   p-4 rounded-lg shadow-xl z-[999] bg-white dark:bg-gray-800 divide-y dark:divide-gray-700"
           >
-            {[...links].splice(1).map((el) => (
+            {[...links].map((el) => (
               <button
                 key={el?.link}
                 onClick={() => handleClick(el.link)}
@@ -240,17 +243,60 @@ export const Mobile = ({ links }) => {
 export const Desktop = ({ links, hoveredIndex, setHoveredIndex, router }) => {
   return (
     <>
+      <NextLink href={'/'}>
+        <a
+          onMouseEnter={() => setHoveredIndex(-1)}
+          onMouseLeave={() => setHoveredIndex(null)}
+          className={`relative rounded-lg px-5 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900 pl-8`}
+        >
+          <AnimatePresence>
+            {hoveredIndex === -1 && (
+              <motion.span
+                className="absolute inset-0 transform bg-gray-50 dark:bg-zinc-900"
+                layoutId="hoverBackground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.15 } }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+              />
+            )}
+          </AnimatePresence>
+
+          <div className="flex">
+            <span
+              className={`relative z-10 text-md  ${router.asPath === '/'
+                ? "text-teal-600"
+                : "text-gray-600 dark:text-gray-50"
+                }`}
+            >
+              Buddhi
+            </span>
+            <span
+              className={`relative z-10 ${router.asPath === '/'
+                ? "text-slate-500"
+                : "text-gray-600 dark:text-gray-50"
+                }`}
+            >
+              .io
+            </span>
+          </div>
+        </a>
+      </NextLink>
+
+
       {links.map((navLink, index) => (
         <NextLink href={navLink.link}>
           <a
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+            className={`relative rounded-lg px-5 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900` + ` ${index === 0 ? 'pl-8' : ''}` + ` ${index === links.length - 1 ? 'pr-8' : ''}`}
           >
             <AnimatePresence>
               {hoveredIndex === index && (
                 <motion.span
-                  className="absolute inset-0  transform bg-gray-50 dark:bg-zinc-900"
+                  className="absolute inset-0 transform bg-gray-50 dark:bg-zinc-900"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { duration: 0.15 } }}
@@ -264,15 +310,12 @@ export const Desktop = ({ links, hoveredIndex, setHoveredIndex, router }) => {
 
             <span
               className={`relative z-10 ${router.asPath === navLink.link
-                  ? "text-teal-600"
-                  : "text-gray-600 dark:text-gray-50"
+                ? "text-teal-600"
+                : "text-gray-600 dark:text-gray-50"
                 }`}
             >
               {navLink.name}
             </span>
-            {router.asPath === navLink.link && (
-              <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-            )}
           </a>
         </NextLink>
       ))}

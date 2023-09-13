@@ -81,6 +81,18 @@
   </url>
 
   <url>
+    <loc>https://manuarora.in/projects/test-one</loc>
+  </url>
+
+  <url>
+    <loc>https://manuarora.in/projects/test-three</loc>
+  </url>
+
+  <url>
+    <loc>https://manuarora.in/projects/test-two</loc>
+  </url>
+
+  <url>
     <loc>https://manuarora.in/snippets/animated-gradient</loc>
   </url>
 
@@ -144,17 +156,5 @@
 
   <url>
     <loc>https://manuarora.in/snippets/toast</loc>
-  </url>
-
-  <url>
-    <loc>https://manuarora.in/projects/test-one</loc>
-  </url>
-
-  <url>
-    <loc>https://manuarora.in/projects/test-three</loc>
-  </url>
-
-  <url>
-    <loc>https://manuarora.in/projects/test-two</loc>
   </url>
 </urlset>
