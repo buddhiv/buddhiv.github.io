@@ -46,19 +46,33 @@ const Header = () => {
             a <span className="font-bold dark:text-zinc-400 font-inter">cloud solutions enthusiast</span> who loves scalable and robust architecture.
           </p>
 
-          <span className="mt-6 gap-4">
-            <a className="text-white dark:bg-teal-600 bg-teal-600 rounded-full text-md bg-gray-50 px-4 py-2 mr-2 cursor-pointer"
+          <div className="flex flex-row flex-wrap mt-6 gap-x-2 gap-y-3">
+            <a className="text-white dark:bg-teal-600 bg-teal-600 rounded-full text-md bg-gray-50 px-4 py-2 cursor-pointer"
               href={'https://buddhiv.medium.com'}
               target="_blank">
-              Visit my Blog{' '}✍
+              <div className="flex items-center">
+                <span>
+                  Visit my Blog
+                </span>
+                <span className="ml-2">
+                  ✍
+                </span>
+              </div>
             </a>
 
             <a className="border border-teal-700 text-gray-700 dark:text-teal-300 dark:bg-transparent rounded-full text-md bg-gray-50 px-4 py-2 cursor-pointer"
               href={'/cv/Buddhi_Vikasitha.pdf'}
               target="_blank">
-              Download Resume{' '}📃
+              <div className="flex items-center">
+                <span>
+                  Download Resume
+                </span>
+                <span className="ml-2">
+                  📃
+                </span>
+              </div>
             </a>
-          </span>
+          </div>
         </div>
 
         <div className=" relative flex-shrink-1 p-4 md:p-4 md:order-last order-first">
@@ -86,7 +100,6 @@ const Header = () => {
       </div>
 
       <div className="mt-10 gap-x-2 gap-y-3 flex flex-row flex-wrap">
-
         <a className="dark:border dark:border-zinc-700 text-gray-700 dark:text-gray-300 dark:bg-transparent rounded-full text-sm border border-gray-200 px-3 py-1 cursor-pointer"
           href="https://www.linkedin.com/in/buddhiv"
           target="_blank">
@@ -149,6 +162,7 @@ const Header = () => {
             </span>
           </div>
         </a>
+
         <a className="dark:border dark:border-zinc-700 text-gray-700 dark:text-gray-300 dark:bg-transparent rounded-full text-sm border border-gray-200 px-3 py-1 cursor-pointer"
           href="https://gitlab.com/buddhiv"
           target="_blank">

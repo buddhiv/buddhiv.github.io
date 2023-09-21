@@ -16,7 +16,7 @@ const LargeAchievementCard = ({ title, description, image, emoji, height, width,
     }
 
     return (
-        <div className="group col-span-2 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full"
+        <div className="group col-span-2 mt-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full"
             onMouseMove={onMouseMove}
         >
             <HoverPattern mouseX={mouseX} mouseY={mouseY} />

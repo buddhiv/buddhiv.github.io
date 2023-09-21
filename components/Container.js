@@ -123,7 +123,7 @@ export default function Container(props) {
 
       <main
         id="skip"
-        className="flex flex-col justify-center bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 antialiased"
+        className="flex flex-col justify-center bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 antialiased px-4"
       >
         {children}
         <Footer />

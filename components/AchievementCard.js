@@ -16,7 +16,7 @@ const AchievementCard = ({ title, description, image, emoji, height, width, link
     }
 
     return (
-        <div className="group hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full"
+        <div className="group mt-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full"
             onMouseMove={onMouseMove}
         >
             <HoverPattern mouseX={mouseX} mouseY={mouseY} />
@@ -25,17 +25,19 @@ const AchievementCard = ({ title, description, image, emoji, height, width, link
                 <span className="absolute w-[40%] -bottom-px right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
                 <span className="absolute w-px -left-px top-[50%] h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
 
-                <div className="flex flex-col items-start dark:border-gray-800 rounded p-4 relative">
-                    <a className="text-lg font-bold tracking-tight text-gray-400 dark:text-gray-100"
-                        href={link}
-                        target="_blank">
-                        {title}
-                    </a>
-                    <a className="leading-7 text-gray-500 dark:text-gray-300"
-                        href={link}
-                        target="_blank">
-                        {description}
-                    </a>
+                <div className="flex flex-row-reverse md:flex-col items-start dark:border-gray-800 rounded p-4 relative">
+                    <div className="flex flex-col items-start ml-6 md:ml-0">
+                        <a className="text-lg font-bold tracking-tight text-gray-400 dark:text-gray-100"
+                            href={link}
+                            target="_blank">
+                            {title}
+                        </a>
+                        <a className="leading-7 text-gray-500 dark:text-gray-300"
+                            href={link}
+                            target="_blank">
+                            {description}
+                        </a>
+                    </div>
 
                     {image ? <div className="mt-6">
                         <Image

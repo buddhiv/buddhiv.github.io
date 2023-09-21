@@ -14,7 +14,7 @@ export default function ProjectCard({ title, description, icon, tags, colSpan })
   }
   return (
     <div
-      className={`group hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full col-span-${colSpan ? colSpan : '1'}`}
+      className={`group mt-4 hover:shadow-lg rounded-xl transition duration-200 relative border border-slate-200 dark:border-slate-700 w-full col-span-${colSpan ? colSpan : '1'}`}
       onMouseMove={onMouseMove}
     >
       <HoverPattern mouseX={mouseX} mouseY={mouseY} />

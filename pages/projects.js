@@ -13,11 +13,11 @@ export default function projects() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Projects
         </h1>
-        <h2 className="prose text-gray-600 dark:text-gray-400 mb-16">
+        <h2 className="prose text-gray-600 dark:text-gray-400 mb-6">
           My creations from work and my own time.
         </h2>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="md:grid md:grid-cols-2 grid-cols-1 gap-x-4">
           <ProjectCard
             title="Banty.com"
             description="A HIPAA and Ontario Health compliant Telehealth solution that can easily add virtual visits to your family practice or specialty. I took care of the technical lead role while planning the technical roadmap, and designing solutions for problems."
