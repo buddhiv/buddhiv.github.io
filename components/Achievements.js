@@ -43,7 +43,7 @@ const Achievements = () => {
                 link={'https://www.credly.com/badges/c9ba3c40-c644-4fca-a12c-123895143cc6'}
             />
             <AchievementCard
-                title={'Scrum Master'}
+                title={'Scrum Certified'}
                 description={'Professional Scrum Master 1'}
                 image={'/scrum.png'}
                 width={80}
