@@ -39,7 +39,7 @@ const AchievementCard = ({ title, description, image, emoji, height, width, link
                         </a>
                     </div>
 
-                    {image ? <div className="mt-6">
+                    {image ? <div className="mt-4">
                         <Image
                             height={height}
                             width={width}

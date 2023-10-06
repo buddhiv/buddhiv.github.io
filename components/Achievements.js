@@ -18,13 +18,37 @@ const Achievements = () => {
 
     return (
         <div className="md:grid md:grid-cols-2 grid-cols-1 gap-x-4 mt-10">
-            <LargeAchievementCard
+            {/* <LargeAchievementCard
                 title={'AWS Certified'}
                 description={'AWS Certified Solutions Architect – Associate'}
                 image={'/aws.png'}
                 width={100}
                 height={100}
-                link={'https://www.credly.com/badges/c9ba3c40-c644-4fca-a12c-123895143cc6/linked_in?t=s1bx4d'}
+                link={'https://www.credly.com/badges/c9ba3c40-c644-4fca-a12c-123895143cc6'}
+            />
+            <LargeAchievementCard
+                title={'Scrum Master'}
+                description={'Professional Scrum Master 1'}
+                image={'/scrum.png'}
+                width={100}
+                height={100}
+                link={'https://www.credly.com/badges/b37ee3f0-c52f-4407-9c85-c7cac7aa334e'}
+            /> */}
+            <AchievementCard
+                title={'AWS Certified'}
+                description={'AWS Certified Solutions Architect – Associate'}
+                image={'/aws.png'}
+                width={80}
+                height={80}
+                link={'https://www.credly.com/badges/c9ba3c40-c644-4fca-a12c-123895143cc6'}
+            />
+            <AchievementCard
+                title={'Scrum Master'}
+                description={'Professional Scrum Master 1'}
+                image={'/scrum.png'}
+                width={80}
+                height={80}
+                link={'https://www.credly.com/badges/b37ee3f0-c52f-4407-9c85-c7cac7aa334e'}
             />
             <AchievementCard
                 title={'Linux Certified'}
