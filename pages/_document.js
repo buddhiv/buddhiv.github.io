@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { GA_TRACKING_ID } from "@/lib/gtag";
+// import Script from "next/script";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -91,10 +91,10 @@ class MyDocument extends Document {
             content="/static/favicons/ms-icon-144x144.png"
           />
           <meta name="theme-color" content="#ffffff" />
-          {/* TODO */}
-          {/* <meta
-            content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
-            name="google-site-verification"
+
+          {/* <Script
+            strategy="lazyOnload"
+            src="https://embed.tawk.to/654928a4a84dd54dc4890e99/1heisdhmh"
           /> */}
         </Head>
         <body className="bg-white dark:bg-zinc-900 text-white dark:text-black">
