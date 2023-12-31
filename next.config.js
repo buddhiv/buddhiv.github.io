@@ -8,10 +8,6 @@ module.exports = {
     ],
   },
   webpack: (config, { dev, isServer }) => {
-    if (isServer) {
-      require("./scripts/generate-sitemap");
-    }
-
     return config;
   },
 };

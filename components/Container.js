@@ -19,9 +19,10 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Manu Arora – Developer, writer, creator.",
-    description: `Full-Stack developer, JavaScript enthusiast, Freelancer and a Learner.`,
-    image: "https://manuarora.in/static/images/banner.png",
+    name: 'Buddhi Vikasitha',
+    title: "Buddhi Vikasitha | Senior Software Engineer",
+    description: `A cloud solutions enthusiast who loves scalable and robust architecture.`,
+    image: "https://buddhiv.io/static/buddhi.png",
     type: "website",
     ...customMeta,
   };
@@ -55,19 +56,14 @@ export default function Container(props) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://manuarora.in${router.asPath}`}
+          content={`https://buddhiv.io${router.asPath}`}
         />
-        <link rel="canonical" href={`https://manuarora.in${router.asPath}`} />
+        <link rel="canonical" href={`https://buddhiv.io${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:site_name" content={meta.name} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mannupaaji" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}

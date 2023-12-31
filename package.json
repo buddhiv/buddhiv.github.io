@@ -1,11 +1,11 @@
 {
-  "name": "manuarora.in",
-  "description": "My personal blog and website",
+  "name": "buddhiv.io",
+  "description": "Buddhi Vikasitha",
   "version": "1.0.0",
   "author": {
-    "name": "Manu Arora",
-    "email": "contact@manuarora.in",
-    "url": "https://manuarora.in"
+    "name": "Buddhi Vikasitha",
+    "email": "buddhivikasitha@gmail.com",
+    "url": "https://buddhiv.io"
   },
   "scripts": {
     "dev": "next dev",
@@ -13,10 +13,6 @@
     "start": "next start"
   },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manuarora700/personal-portfolio.git"
-  },
   "dependencies": {
     "@headlessui/react": "^1.2.0",
     "@mdx-js/loader": "^1.6.22",
